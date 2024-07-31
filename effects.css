@@ -42,7 +42,7 @@ img {
     animation-iteration-count: infinite;
 }
 
-@keyframes animation-for-second {
+/* @keyframes animation-for-second {
     0% {
         width: 100px;
     }
@@ -57,5 +57,39 @@ img {
     }
     100% {
         width: 100px;
+    } */
+/* } */
+
+.parent-typing-effect {
+    display: flex;
+    margin-top: 50px;
+    animation-name: typing-effect;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+
+.typing-effect {
+font-size: 24px;
+animation: typing-effect 0.5s change-width 2s;
+animation-iteration-count: infinite;
+}
+
+@keyframes typing-effect {
+    0% {
+        /* width: 0; */
+        border-right: none;
+    }
+    100% {
+        /* width: 100%; */
+        border-right: 1px solid black;
+    }
+}
+
+@keyframes change-width {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
     }
 }
